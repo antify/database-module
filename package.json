@@ -1,0 +1,43 @@
+{
+  "name": "@antify/database-module",
+  "version": "1.0.0",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/module.mjs",
+      "require": "./dist/module.cjs",
+      "types": "./dist/types.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/module.cjs",
+  "types": "./dist/types.d.ts",
+  "scripts": {
+    "prepack": "nuxt-module-build build",
+    "dev": "nuxi dev playground",
+    "dev:build": "nuxi build playground",
+    "dev:prepare": "nuxt-module-build build --stub && nuxt-module-build prepare && nuxi prepare playground",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@antify/database": "file:../database",
+    "@nuxt/kit": "^3.8.2",
+    "defu": "^6.1.4",
+    "mongoose": "^8.1.2"
+  },
+  "devDependencies": {
+    "@antify/database-cli": "file:../database-cli",
+    "@faker-js/faker": "^8.4.1",
+    "@nuxt/eslint-config": "latest",
+    "@nuxt/module-builder": "latest",
+    "@nuxt/schema": "^3.8.2",
+    "eslint": "latest",
+    "eslint-plugin-storybook": "latest",
+    "h3": "^1.10.1",
+    "nuxt": "^3.8.2",
+    "standard-version": "latest"
+  }
+}
