@@ -1,6 +1,6 @@
 {
   "name": "@antify/database-module",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "type": "module",
   "exports": {
@@ -20,7 +20,7 @@
     "dev": "nuxi dev playground",
     "dev:build": "nuxi build playground",
     "dev:prepare": "nuxt-module-build build --stub && nuxt-module-build prepare && nuxi prepare playground",
-		"release": "standard-version && git push --follow-tags && pnpm publish",
+    "release": "standard-version && git push --follow-tags && pnpm publish",
     "lint": "eslint ."
   },
   "dependencies": {
