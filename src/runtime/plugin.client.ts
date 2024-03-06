@@ -1,6 +1,6 @@
-import {defineNuxtPlugin} from '#imports';
+import {defineNuxtPlugin, useRuntimeConfig} from '#imports';
 
-export default defineNuxtPlugin((nuxtApp) => {
+export default defineNuxtPlugin(() => {
 	const {providerHeaderKey, tenantIdHeaderKey} = useRuntimeConfig().public.databaseModule;
 
 	return {
