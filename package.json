@@ -2,6 +2,7 @@
   "name": "@antify/database-module",
   "version": "1.0.2",
   "license": "MIT",
+	"private": "false",
   "type": "module",
   "exports": {
     ".": {
