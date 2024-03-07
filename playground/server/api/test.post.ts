@@ -1,5 +1,6 @@
 import {useDatabaseClient} from '#database-module';
-import type {Car} from '~/playground/server/datasources/db/schemas/car';
+import {defineEventHandler, readBody} from '#imports';
+import type {Car} from '../datasources/db/schemas/car';
 
 export default defineEventHandler(async (event) => {
 	const car = await readBody<Car>(event);

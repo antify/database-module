@@ -2,6 +2,9 @@ export default defineNuxtConfig({
   modules: [
     '../src/module',
   ],
-  ssr: false,
-  databaseModule: {}
+  databaseModule: {},
+	ssr: false,
+	imports: {
+		autoImport: false
+	}
 });
