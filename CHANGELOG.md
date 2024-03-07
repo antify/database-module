@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.7](https://github.com/antify/database-module/compare/v1.0.6...v1.0.7) (2024-03-07)
+
+
+### Bug Fixes
+
+* Fix undefined useRuntimeConfig ([aa2faa1](https://github.com/antify/database-module/commit/aa2faa1cb204a401bbe605f9e95a916b40db604b))
+
 ### [1.0.6](https://github.com/antify/database-module/compare/v1.0.5...v1.0.6) (2024-03-06)
 
 
