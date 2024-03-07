@@ -3,7 +3,7 @@ import {
   SingleConnectionClient,
   type MultiConnectionClient
 } from '@antify/database';
-import type {H3Event} from "h3";
+import type {H3Event} from 'h3';
 import {getContext} from './context'
 
 export const useDatabaseClient = async (event: H3Event): Promise<SingleConnectionClient | MultiConnectionClient> => {
@@ -16,15 +16,15 @@ export const useDatabaseClient = async (event: H3Event): Promise<SingleConnectio
   const client = await getDatabaseClient(provider);
 
   if (client instanceof SingleConnectionClient) {
-    await (client as SingleConnectionClient).connect();
+    await client.connect();
   } else {
     if (!tenantId) {
       throw Error(
-        `Context error: Missing required tenantId for multi tenancy context`
+        'Context error: Missing required tenantId for multi tenancy context'
       );
     }
 
-    await (client as MultiConnectionClient).connect(tenantId);
+    await client.connect(tenantId);
   }
 
   return client;

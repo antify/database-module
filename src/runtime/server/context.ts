@@ -1,3 +1,4 @@
+import {useRuntimeConfig} from '#imports';
 import {type H3Event} from 'h3';
 
 export const getContext = (event: H3Event): {
