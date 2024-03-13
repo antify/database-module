@@ -1,31 +1,32 @@
 import {
-  getDatabaseClient,
-  SingleConnectionClient,
-  type MultiConnectionClient
+	getDatabaseClient,
+	SingleConnectionClient,
+	type MultiConnectionClient
 } from '@antify/database';
 import type {H3Event} from 'h3';
-import {getContext} from './context'
+import {getContext} from './context';
+import {createError} from '#imports';
 
 export const useDatabaseClient = async (event: H3Event): Promise<SingleConnectionClient | MultiConnectionClient> => {
-  const {provider, tenantId} = getContext(event);
+	const {provider, tenantId} = getContext(event);
 
-  if (!provider) {
-    throw createError('Missing required provider in request');
-  }
+	if (!provider) {
+		throw createError('Missing required provider in request');
+	}
 
-  const client = await getDatabaseClient(provider);
+	const client = await getDatabaseClient(provider);
 
-  if (client instanceof SingleConnectionClient) {
-    await client.connect();
-  } else {
-    if (!tenantId) {
-      throw Error(
-        'Context error: Missing required tenantId for multi tenancy context'
-      );
-    }
+	if (client instanceof SingleConnectionClient) {
+		await client.connect();
+	} else {
+		if (!tenantId) {
+			throw Error(
+				'Context error: Missing required tenantId for multi tenancy context'
+			);
+		}
 
-    await client.connect(tenantId);
-  }
+		await client.connect(tenantId);
+	}
 
-  return client;
+	return client;
 };
