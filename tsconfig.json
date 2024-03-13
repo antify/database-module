@@ -1,7 +1,3 @@
 {
-  "extends": "./.nuxt/tsconfig.json",
-	"exclude": [
-		"dist",
-		"playground"
-	]
+  "extends": "./.nuxt/tsconfig.json"
 }

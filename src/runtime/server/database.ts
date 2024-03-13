@@ -11,7 +11,7 @@ export const useDatabaseClient = async (event: H3Event): Promise<SingleConnectio
 	const {provider, tenantId} = getContext(event);
 
 	if (!provider) {
-		throw createError('Missing required provider in request');
+		throw createError('Context error: Missing required provider in request');
 	}
 
 	const client = await getDatabaseClient(provider);
