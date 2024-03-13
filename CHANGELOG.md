@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.9](https://github.com/antify/database-module/compare/v1.0.8...v1.0.9) (2024-03-13)
+
+
+### Bug Fixes
+
+* Fix undefined createError method ([b6efe73](https://github.com/antify/database-module/commit/b6efe73055e663d3ddd907e8b3d2c8b0f263f6fd))
+
 ### [1.0.8](https://github.com/antify/database-module/compare/v1.0.7...v1.0.8) (2024-03-07)
 
 
