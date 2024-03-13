@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/antify/database-module/compare/v1.0.9...v1.1.0) (2024-03-13)
+
+
+### Features
+
+* add useContextHeaders composable ([b20ce1d](https://github.com/antify/database-module/commit/b20ce1d2705b47d0be910ff3a28ae1f117cd759d))
+
 ### [1.0.9](https://github.com/antify/database-module/compare/v1.0.8...v1.0.9) (2024-03-13)
 
 
