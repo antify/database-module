@@ -3,18 +3,12 @@ import {
 	SingleConnectionClient,
 	type MultiConnectionClient
 } from '@antify/database';
-import type {H3Event} from 'h3';
-import {getContext} from './context';
-import {createError} from '#imports';
 
-export const useDatabaseClient = async (event: H3Event): Promise<SingleConnectionClient | MultiConnectionClient> => {
-	const {provider, tenantId} = getContext(event);
-
-	if (!provider) {
-		throw createError('Context error: Missing required provider in request');
-	}
-
-	const client = await getDatabaseClient(provider);
+export const useDatabaseClient = async (
+	providerId: string,
+	tenantId: string | null = null
+): Promise<SingleConnectionClient | MultiConnectionClient> => {
+	const client = await getDatabaseClient(providerId);
 
 	if (client instanceof SingleConnectionClient) {
 		await client.connect();
