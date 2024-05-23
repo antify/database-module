@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/antify/database-module/compare/v1.1.0...v1.2.0) (2024-05-23)
+
+
+### Features
+
+* bump nuxt to 3.10.3 ([eda2402](https://github.com/antify/database-module/commit/eda240273c3ac6f7d5c877515c36fec8cc307734))
+* remove context things cuz it's outsourced to @antify/app-context-module ([e43345f](https://github.com/antify/database-module/commit/e43345f408979a3a5847a0acc7662575a48c5e90))
+
 ## [1.1.0](https://github.com/antify/database-module/compare/v1.0.9...v1.1.0) (2024-03-13)
 
 
