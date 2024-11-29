@@ -17,7 +17,7 @@
   "main": "./dist/module.cjs",
   "types": "./dist/types.d.ts",
   "scripts": {
-    "prepack": "nuxt-module-build build",
+    "prepack": "pnpm dev:prepare && nuxt-module-build build",
     "dev": "nuxi dev playground",
     "dev:build": "nuxi build playground",
     "dev:prepare": "nuxt-module-build build --stub && nuxt-module-build prepare && nuxi prepare playground",
@@ -26,7 +26,7 @@
   },
   "dependencies": {
     "@antify/database": "^1.1.0",
-    "@nuxt/kit": "^3.10.3",
+    "@nuxt/kit": "^3.13.2",
     "defu": "^6.1.4",
     "mongoose": "^8.1.2"
   },
@@ -35,10 +35,10 @@
     "@faker-js/faker": "^8.4.1",
     "@nuxt/eslint-config": "latest",
     "@nuxt/module-builder": "latest",
-    "@nuxt/schema": "^3.10.3",
+    "@nuxt/schema": "^3.13.3",
     "eslint": "latest",
     "eslint-plugin-storybook": "latest",
-    "nuxt": "^3.10.3",
+    "nuxt": "^3.13.2",
     "standard-version": "latest"
   }
 }
