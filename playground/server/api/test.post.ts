@@ -1,7 +1,7 @@
 import {useDatabaseClient} from '#database-module';
 import {defineEventHandler, readBody, getQuery} from '#imports';
 import type {Car} from '../datasources/db/schemas/car';
-import mongoose from 'mongoose';
+import {connections} from 'mongoose';
 
 export default defineEventHandler(async (event) => {
 	const car = await readBody<Car>(event);
@@ -13,7 +13,7 @@ export default defineEventHandler(async (event) => {
 
 	return {
 		count: await CarModel.countDocuments(),
-		amountOfConnections: mongoose.connections.length,
+		amountOfConnections: connections.length,
 		randomColorVirtualField: createdCar.randomColor,
 	};
 })

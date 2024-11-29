@@ -4,7 +4,7 @@ import {
 	addTemplate,
 } from '@nuxt/kit';
 import defu from 'defu';
-import mongoose from 'mongoose';
+import {disconnect} from 'mongoose';
 
 export type ModuleOptions = {};
 
@@ -19,7 +19,7 @@ export default defineNuxtModule<ModuleOptions>({
 	defaults: {},
 	hooks: {
 		close: () => {
-			mongoose.disconnect()
+			disconnect()
 		},
 	},
 	async setup(options, nuxt) {
