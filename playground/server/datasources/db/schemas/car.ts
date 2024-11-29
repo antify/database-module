@@ -22,5 +22,10 @@ export default defineSchema(async (client) => {
       required: true,
     }
   });
-});
 
+	if (!client.getSchema('cars').virtualpath('randomColor')) {
+		client.getSchema('cars').virtual('randomColor').get(function () {
+			return ['red', 'blue', 'green'][Math.floor(Math.random() * 3)];
+		});
+	}
+});

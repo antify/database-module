@@ -9,10 +9,11 @@ export default defineEventHandler(async (event) => {
 	const client = await useDatabaseClient(providerId || 'core', tenantId || null);
 	const CarModel = client.getModel<Car>('cars');
 
-	await (new CarModel(car)).save();
+	const createdCar = await (new CarModel(car)).save();
 
 	return {
 		count: await CarModel.countDocuments(),
-		amountOfConnections: mongoose.connections.length
+		amountOfConnections: mongoose.connections.length,
+		randomColorVirtualField: createdCar.randomColor,
 	};
 })
