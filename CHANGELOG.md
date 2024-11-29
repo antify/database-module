@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/antify/database-module/compare/v1.2.0...v1.3.0) (2024-11-29)
+
+
+### Features
+
+* **playground:** add virtual fields example ([3867f8d](https://github.com/antify/database-module/commit/3867f8dc7b33e67ed8717bb187d3c858fd1a80ec))
+
+
+### Bug Fixes
+
+* Improve tree shaking ([2100a9a](https://github.com/antify/database-module/commit/2100a9a0f556514f63f6e7ed0d8c80f5548aaab3))
+
 ## [1.2.0](https://github.com/antify/database-module/compare/v1.1.0...v1.2.0) (2024-05-23)
 
 
