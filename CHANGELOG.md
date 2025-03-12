@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/antify/database-module/compare/v1.3.0...v1.4.0) (2025-03-12)
+
+
+### Features
+
+* remove mongoose as dependency ([cb7e2e2](https://github.com/antify/database-module/commit/cb7e2e2ebb6418b7bf4ecf39da5a263ae0a0fd5f))
+
 ## [1.3.0](https://github.com/antify/database-module/compare/v1.2.0...v1.3.0) (2024-11-29)
 
 
