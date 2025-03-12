@@ -4,7 +4,7 @@ import {
 	addTemplate,
 } from '@nuxt/kit';
 import defu from 'defu';
-import {disconnect} from 'mongoose';
+import {disconnect} from '@antify/database';
 
 export type ModuleOptions = {};
 
@@ -26,8 +26,8 @@ export default defineNuxtModule<ModuleOptions>({
 		const {resolve} = createResolver(import.meta.url);
 		const runtimeDir = resolve('runtime');
 
-		nuxt.options.alias['#database-module'] = runtimeDir
-		nuxt.options.build.transpile.push(runtimeDir);
+		// nuxt.options.alias['#database-module'] = runtimeDir
+		// nuxt.options.build.transpile.push(runtimeDir);
 
 		nuxt.hook('nitro:config', (_config) => {
 			_config.alias = _config.alias || {}
