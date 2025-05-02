@@ -19,6 +19,7 @@ export const useDatabaseClient = async (
 	tenantId: string | null = null,
 	strict: boolean = false
 ): Promise<SingleConnectionClient | MultiConnectionClient> => {
+	console.info(`Loading database configuration from ${process.cwd()}`);
 	const client = await getDatabaseClient(providerId);
 
 	if (client instanceof SingleConnectionClient) {
