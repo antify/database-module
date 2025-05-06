@@ -26,6 +26,10 @@ const {
 	headers: {
 		'Content-Type': 'application/json'
 	},
+	query: {
+		databaseId: 'tenant',
+		tenantId: '65b23bf98f24acdf2bdc6f7f',
+	},
 	immediate: false,
 	onRequest(context) {
 		context.options.body = generateRandomCar();

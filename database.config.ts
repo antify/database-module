@@ -9,10 +9,6 @@ export default defineDatabaseConfig({
       'src/runtime/server/datasources/db/fixtures',
       'playground/server/datasources/db/fixtures'
     ],
-    schemasDir: [
-      'src/runtime/server/datasources/db/schemas',
-      'playground/server/datasources/db/schemas'
-    ],
   },
   tenant: {
     databaseUrl: 'mongodb://root:root@127.0.0.1:27017',
@@ -21,10 +17,6 @@ export default defineDatabaseConfig({
     fixturesDir: [
       'src/runtime/server/datasources/db/fixtures',
       'playground/server/datasources/db/fixtures'
-    ],
-    schemasDir: [
-      'src/runtime/server/datasources/db/schemas',
-      'playground/server/datasources/db/schemas'
     ],
     fetchTenants: async () => [{
       id: '65b23bf98f24acdf2bdc6f7f',

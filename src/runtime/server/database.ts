@@ -1,25 +1,28 @@
 import {
-	getDatabaseClient,
 	SingleConnectionClient,
-	type MultiConnectionClient
+	MultiConnectionClient,
 } from '@antify/database';
-import {
-	IllegalTenantError
-} from './errors/IllegalTenantError';
+import databaseConfig from '#database-module-config';
 
 /**
- * @param providerId
+ * @param databaseId
  * @param tenantId
  * @param strict => If true, before each multi connection get connected, it validates if the tenantId exists.
  * Be careful with this option, because it can cause a lot of database queries if the configuration.getTenants()
  * method is not cached.
  */
 export const useDatabaseClient = async (
-	providerId: string,
+	databaseId: string,
 	tenantId: string | null = null,
 	strict: boolean = false
 ): Promise<SingleConnectionClient | MultiConnectionClient> => {
-	const client = await getDatabaseClient(providerId);
+	if (!databaseConfig[databaseId]) {
+		throw new Error(`Configuration with name ${databaseId} does not exists`);
+	}
+
+	const client = databaseConfig[databaseId].isSingleConnection
+		? SingleConnectionClient.getInstance(databaseConfig[databaseId])
+		: MultiConnectionClient.getInstance(databaseConfig[databaseId]);
 
 	if (client instanceof SingleConnectionClient) {
 		await client.connect();
@@ -30,15 +33,7 @@ export const useDatabaseClient = async (
 			);
 		}
 
-		if (strict) {
-			const tenants = await client.getConfiguration().fetchTenants();
-
-			if (!tenants.some((tenant) => tenant.id === tenantId)) {
-				throw new IllegalTenantError(tenantId, client.getConfiguration().name || '');
-			}
-		}
-
-		await client.connect(tenantId);
+		await client.connect(tenantId, strict);
 	}
 
 	return client;

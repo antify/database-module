@@ -4,9 +4,14 @@ import {
 	addTemplate,
 } from '@nuxt/kit';
 import defu from 'defu';
-import {disconnect} from '@antify/database';
+import {
+	disconnect
+} from '@antify/database';
+import {join, relative} from "pathe";
 
-export type ModuleOptions = {};
+export type ModuleOptions = {
+	configPath: string
+};
 
 export default defineNuxtModule<ModuleOptions>({
 	meta: {
@@ -16,18 +21,17 @@ export default defineNuxtModule<ModuleOptions>({
 			nuxt: '^3.10.0'
 		}
 	},
-	defaults: {},
 	hooks: {
-		close: () => {
-			disconnect()
+		close: async () => {
+			await disconnect()
 		},
 	},
 	async setup(options, nuxt) {
 		const {resolve} = createResolver(import.meta.url);
 		const runtimeDir = resolve('runtime');
+		const typesBuildDir = join(nuxt.options.buildDir, 'types');
 
-		// nuxt.options.alias['#database-module'] = runtimeDir
-		// nuxt.options.build.transpile.push(runtimeDir);
+		nuxt.options.runtimeConfig['databaseModule'] = options;
 
 		nuxt.hook('nitro:config', (_config) => {
 			_config.alias = _config.alias || {}
@@ -37,6 +41,7 @@ export default defineNuxtModule<ModuleOptions>({
 				inline: [resolve('runtime')],
 			})
 			_config.alias['#database-module'] = resolve(runtimeDir, 'server');
+			_config.alias['#database-module-config'] = options.configPath;
 		});
 
 		addTemplate({
@@ -44,6 +49,9 @@ export default defineNuxtModule<ModuleOptions>({
 			getContents: () => [
 				'declare module \'#database-module\' {',
 				`  const useDatabaseClient: typeof import('${resolve(runtimeDir, 'server', 'database')}')['useDatabaseClient']`,
+				'}',
+				'declare module \'#database-module-config\' {',
+				`  const default: typeof import("${relative(typesBuildDir, options.configPath)}")['default']`,
 				'}',
 			].join('\n'),
 		})

@@ -1,14 +1,17 @@
 export default defineNuxtConfig({
- modules: [
-   '../src/module',
- ],
+	modules: [
+		'../src/module',
+	],
 
- databaseModule: {},
- ssr: false,
-
- imports: {
-     autoImport: false
+	databaseModule: {
+		configPath: './database.config.ts',
 	},
 
- compatibilityDate: '2024-11-29'
+	ssr: false,
+
+	imports: {
+		autoImport: false
+	},
+
+	compatibilityDate: '2024-11-29'
 });
