@@ -1,6 +1,6 @@
 {
   "name": "@antify/database-module",
-  "version": "1.5.2",
+  "version": "1.6.0",
   "license": "MIT",
   "private": false,
   "type": "module",
