@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@antify/database':
-        specifier: 2.0.0
-        version: 2.0.0
+        specifier: ^3.0.0
+        version: 3.0.0
       '@nuxt/kit':
         specifier: ^3.13.2
         version: 3.17.2(magicast@0.3.5)
@@ -64,8 +64,8 @@ packages:
     resolution: {integrity: sha512-VcDoAEo5PbF6FyaMM5d5F0KFdlZsw3DV0u4NZYvcoMfNkRHfTEfKp7r10KbkdyTGrHPR14z59VdsQyTdAdMRXA==}
     engines: {node: '>=22.14'}
 
-  '@antify/database@2.0.0':
-    resolution: {integrity: sha512-gPnFiyk29/91SnS4bo3RNwhuW/8+qSZhITYt6GYG/mKZmZuX3qwcJ11QmlSbzeU9ggdBgEuCltlBcWvK5aOHFw==}
+  '@antify/database@3.0.0':
+    resolution: {integrity: sha512-P++uzep79LmGFLCmzVfqonzgMALl9o10B8u+Yqg09i5IW7qcLtai0iZr5CazOd3Ui5xAotIoS1ua6ZGnrEtSuA==}
     engines: {node: ^22.14.0, pnpm: '>=8'}
 
   '@babel/code-frame@7.27.1':
@@ -5230,7 +5230,7 @@ snapshots:
       - socks
       - supports-color
 
-  '@antify/database@2.0.0':
+  '@antify/database@3.0.0':
     dependencies:
       h3: 1.15.3
       jiti: 1.21.7
