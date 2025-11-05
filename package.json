@@ -24,12 +24,12 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "@antify/database": "^3.0.0",
+    "@antify/database": "3.1.0",
     "@nuxt/kit": "^3.13.2",
     "defu": "^6.1.4"
   },
   "devDependencies": {
-    "@antify/database-cli": "latest",
+    "@antify/database-cli": "^1.4.0",
     "@faker-js/faker": "^8.4.1",
     "@nuxt/eslint-config": "latest",
     "@nuxt/module-builder": "latest",

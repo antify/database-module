@@ -1,8 +1,11 @@
 import {defineDatabaseConfig} from '@antify/database';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 export default defineDatabaseConfig({
   core: {
-    databaseUrl: 'mongodb://core:core@localhost:27017/core',
+    databaseUrl: process.env.NUXT_DB_CORE_URL as string || 'mongodb://core:core@localhost:27017/core',
     isSingleConnection: true,
     migrationDir: './migrations/core',
     fixturesDir: [
@@ -11,7 +14,7 @@ export default defineDatabaseConfig({
     ],
   },
   tenant: {
-    databaseUrl: 'mongodb://root:root@127.0.0.1:27017',
+    databaseUrl: process.env.NUXT_DB_TENANT_URL as string || 'mongodb://root:root@127.0.0.1:27017',
     isSingleConnection: false,
     migrationDir: './migrations/tenant',
     fixturesDir: [
