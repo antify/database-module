@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.10.0](https://github.com/antify/database-module/compare/v1.9.0...v1.10.0) (2025-11-21)
+
+
+### Features
+
+* Implement vercel connection pooler ([08ff9ba](https://github.com/antify/database-module/commit/08ff9ba2311dda5594e25264ff9543ebdb735d0c))
+
 ## [1.9.0](https://github.com/antify/database-module/compare/v1.8.0...v1.9.0) (2025-11-21)
 
 
