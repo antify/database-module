@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.9.0](https://github.com/antify/database-module/compare/v1.8.0...v1.9.0) (2025-11-21)
+
+
+### Features
+
+* Update @antify/database module to 3.2.0 ([2d79eb1](https://github.com/antify/database-module/commit/2d79eb167433aced8e5798bf3a9f35669a2deb39))
+
 ## [1.8.0](https://github.com/antify/database-module/compare/v1.7.0...v1.8.0) (2025-11-05)
 
 
