@@ -24,7 +24,7 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "@antify/database": "3.3.2",
+    "@antify/database": "3.3.3",
     "@nuxt/kit": "^3.13.2",
     "defu": "^6.1.4"
   },

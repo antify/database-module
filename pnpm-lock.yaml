@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@antify/database':
-        specifier: 3.3.2
-        version: 3.3.2
+        specifier: 3.3.3
+        version: 3.3.3
       '@nuxt/kit':
         specifier: ^3.13.2
         version: 3.17.2(magicast@0.3.5)
@@ -60,8 +60,8 @@ packages:
     engines: {node: ^22.14.0, pnpm: '>=8'}
     hasBin: true
 
-  '@antify/database@3.3.2':
-    resolution: {integrity: sha512-3+6pC6BbslwOd4Zwi14EPgId5ij88nozTASIcvIRDBhIXzRgsubcruyvF1VpJrMQiYJL8HZU3vrJF0t8LeniOQ==}
+  '@antify/database@3.3.3':
+    resolution: {integrity: sha512-EQ1eMpU9ubtIxKGxuMfJawV6bqRvB0nsOLCrvxCHsELF3G0KDCAUb4RbBJGFrz3GNadodKW2HisQ6V9icH4AjA==}
     engines: {node: ^22.14.0, pnpm: '>=8'}
 
   '@babel/code-frame@7.27.1':
@@ -1300,6 +1300,15 @@ packages:
     cpu: [x64]
     os: [win32]
 
+  '@vercel/functions@3.3.3':
+    resolution: {integrity: sha512-Gf+Nc/h7YjTpIhVk9UqGqKUcOIlnuSTqEKr7aApEeYjPUeqr/C4UddU6FyCyrFM0tnefKcOXVA6m7op+1JSZBg==}
+    engines: {node: '>= 20'}
+    peerDependencies:
+      '@aws-sdk/credential-provider-web-identity': '*'
+    peerDependenciesMeta:
+      '@aws-sdk/credential-provider-web-identity':
+        optional: true
+
   '@vercel/nft@0.27.7':
     resolution: {integrity: sha512-FG6H5YkP4bdw9Ll1qhmbxuE8KwW2E/g8fJpM183fWQLeVDGqzeywMIeJ9h2txdWZ03psgWMn6QymTxaDLmdwUg==}
     engines: {node: '>=16'}
@@ -1309,6 +1318,10 @@ packages:
     resolution: {integrity: sha512-A/Si4mrTkQqJ6EXJKv5EYCDQ3NL6nJXxG8VGXePsaiQigsomHYQC9xSpX8qGk7AEZk4b1ssbYIqJ0ISQQ7bfcA==}
     engines: {node: '>=18'}
     hasBin: true
+
+  '@vercel/oidc@3.0.5':
+    resolution: {integrity: sha512-fnYhv671l+eTTp48gB4zEsTW/YtRgRPnkI2nT7x6qw5rkI1Lq2hTmQIpHPgyThI0znLK+vX2n9XxKdXZ7BUbbw==}
+    engines: {node: '>= 20'}
 
   '@vitejs/plugin-vue-jsx@4.1.2':
     resolution: {integrity: sha512-4Rk0GdE0QCdsIkuMmWeg11gmM4x8UmTnZR/LWPm7QJ7+BsK4tq08udrN0isrrWqz5heFy9HLV/7bOLgFS8hUjA==}
@@ -5195,10 +5208,11 @@ snapshots:
 
   '@antify/database-cli@1.4.0':
     dependencies:
-      '@antify/database': 3.3.2
+      '@antify/database': 3.3.3
       dotenv: 16.5.0
       scule: 1.3.0
     transitivePeerDependencies:
+      - '@aws-sdk/credential-provider-web-identity'
       - '@aws-sdk/credential-providers'
       - '@mongodb-js/zstd'
       - gcp-metadata
@@ -5208,8 +5222,9 @@ snapshots:
       - socks
       - supports-color
 
-  '@antify/database@3.3.2':
+  '@antify/database@3.3.3':
     dependencies:
+      '@vercel/functions': 3.3.3
       h3: 1.15.3
       jiti: 1.21.7
       mongoose: 8.14.1
@@ -5217,6 +5232,7 @@ snapshots:
     optionalDependencies:
       fsevents: 2.3.3
     transitivePeerDependencies:
+      - '@aws-sdk/credential-provider-web-identity'
       - '@aws-sdk/credential-providers'
       - '@mongodb-js/zstd'
       - gcp-metadata
@@ -6574,6 +6590,10 @@ snapshots:
   '@unrs/resolver-binding-win32-x64-msvc@1.7.2':
     optional: true
 
+  '@vercel/functions@3.3.3':
+    dependencies:
+      '@vercel/oidc': 3.0.5
+
   '@vercel/nft@0.27.7(rollup@4.40.1)':
     dependencies:
       '@mapbox/node-pre-gyp': 1.0.11
@@ -6611,6 +6631,8 @@ snapshots:
       - encoding
       - rollup
       - supports-color
+
+  '@vercel/oidc@3.0.5': {}
 
   '@vitejs/plugin-vue-jsx@4.1.2(vite@6.3.5(@types/node@22.15.3)(jiti@2.4.2)(terser@5.39.0)(yaml@2.7.1))(vue@3.5.13(typescript@5.8.3))':
     dependencies:
