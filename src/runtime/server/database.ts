@@ -3,7 +3,6 @@ import {
 	MultiConnectionClient,
 } from '@antify/database';
 import databaseConfig from '#database-module-config';
-import { attachDatabasePool } from '@vercel/functions';
 
 /**
  * @param databaseId
@@ -24,8 +23,6 @@ export const useDatabaseClient = async (
 	const client = databaseConfig[databaseId].isSingleConnection
 		? SingleConnectionClient.getInstance(databaseConfig[databaseId])
 		: MultiConnectionClient.getInstance(databaseConfig[databaseId]);
-
-	attachDatabasePool(client.getConnection().getClient());
 
 	if (client instanceof SingleConnectionClient) {
 		await client.connect();

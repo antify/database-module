@@ -9,14 +9,11 @@ importers:
   .:
     dependencies:
       '@antify/database':
-        specifier: 3.2.0
-        version: 3.2.0
+        specifier: 3.3.0
+        version: 3.3.0
       '@nuxt/kit':
         specifier: ^3.13.2
         version: 3.17.2(magicast@0.3.5)
-      '@vercel/functions':
-        specifier: ^3.3.3
-        version: 3.3.3
       defu:
         specifier: ^6.1.4
         version: 6.1.4
@@ -63,8 +60,8 @@ packages:
     engines: {node: ^22.14.0, pnpm: '>=8'}
     hasBin: true
 
-  '@antify/database@3.2.0':
-    resolution: {integrity: sha512-qwZDqcsL/5J/teA6ySEnr8y0ytA1DzScpTG5CP1V30IKB+mvPskWE1jdTRxKYTfYJU4sEwD9zUf3L9vw7/sUIA==}
+  '@antify/database@3.3.0':
+    resolution: {integrity: sha512-SKSWmizOTFOqF3D7uzdRAC0rkB0cOSX9yonNmKSMlPyAIxjeUyogvoNr1X4kgZhEaVqyvWLflt0tClGQs2C4rQ==}
     engines: {node: ^22.14.0, pnpm: '>=8'}
 
   '@babel/code-frame@7.27.1':
@@ -5211,10 +5208,11 @@ snapshots:
 
   '@antify/database-cli@1.4.0':
     dependencies:
-      '@antify/database': 3.2.0
+      '@antify/database': 3.3.0
       dotenv: 16.5.0
       scule: 1.3.0
     transitivePeerDependencies:
+      - '@aws-sdk/credential-provider-web-identity'
       - '@aws-sdk/credential-providers'
       - '@mongodb-js/zstd'
       - gcp-metadata
@@ -5224,8 +5222,9 @@ snapshots:
       - socks
       - supports-color
 
-  '@antify/database@3.2.0':
+  '@antify/database@3.3.0':
     dependencies:
+      '@vercel/functions': 3.3.3
       h3: 1.15.3
       jiti: 1.21.7
       mongoose: 8.14.1
@@ -5233,6 +5232,7 @@ snapshots:
     optionalDependencies:
       fsevents: 2.3.3
     transitivePeerDependencies:
+      - '@aws-sdk/credential-provider-web-identity'
       - '@aws-sdk/credential-providers'
       - '@mongodb-js/zstd'
       - gcp-metadata
