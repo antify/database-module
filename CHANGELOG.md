@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 1.15.0 (2026-01-09)
+
+
+### Features
+
+* Add release cd and bump @antify/database to 3.4.1 ([a56bfd5](https://github.com/antify/database-module/commit/a56bfd51020d3eb9fc2ed885215cee27e0145162))
+
 ## [1.14.0](https://github.com/antify/database-module/compare/v1.13.0...v1.14.0) (2025-11-21)
 
 

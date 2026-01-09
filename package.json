@@ -1,6 +1,6 @@
 {
   "name": "@antify/database-module",
-  "version": "1.14.0",
+  "version": "1.15.0",
   "license": "MIT",
   "private": false,
   "type": "module",
@@ -39,12 +39,12 @@
     "nuxt": "^3.13.2",
     "standard-version": "latest"
   },
-	"engines": {
-		"node": "^22.14.0",
-		"pnpm": ">=8"
-	},
-	"packageManager": "pnpm@8.10.0",
-	"publishConfig": {
-		"access": "public"
-	}
+  "engines": {
+    "node": "^22.14.0",
+    "pnpm": ">=8"
+  },
+  "packageManager": "pnpm@8.10.0",
+  "publishConfig": {
+    "access": "public"
+  }
 }
