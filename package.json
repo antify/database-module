@@ -24,7 +24,7 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "@antify/database": "3.3.3",
+    "@antify/database": "3.4.1",
     "@nuxt/kit": "^3.13.2",
     "defu": "^6.1.4"
   },
@@ -38,5 +38,13 @@
     "eslint-plugin-storybook": "latest",
     "nuxt": "^3.13.2",
     "standard-version": "latest"
-  }
+  },
+	"engines": {
+		"node": "^22.14.0",
+		"pnpm": ">=8"
+	},
+	"packageManager": "pnpm@8.10.0",
+	"publishConfig": {
+		"access": "public"
+	}
 }
