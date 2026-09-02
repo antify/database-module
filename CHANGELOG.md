@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/antify/database-module/compare/v1.15.0...v2.0.0) (2026-09-02)
+
+
+### ⚠ BREAKING CHANGES
+
+* The module now depends on @antify/database 4 and @antify/database-cli 2.
+
+Co-authored-by: Copilot <223556219+Copilot@users.noreply.github.com>
+
+### Features
+
+* update database integration for migration context ([961e3f2](https://github.com/antify/database-module/commit/961e3f2005953430ec58e454257858faccac9790))
+
 ## 1.15.0 (2026-01-09)
 
 
