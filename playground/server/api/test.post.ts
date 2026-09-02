@@ -1,6 +1,6 @@
 import {useDatabaseClient} from '#database-module';
 import {defineEventHandler, readBody, getQuery} from '#imports';
-import {default as carSchema} from '../datasources/db/schemas/car.schema';
+import carSchema from '../datasources/db/schemas/car.schema';
 import {connections} from '@antify/database';
 
 export default defineEventHandler(async (event) => {

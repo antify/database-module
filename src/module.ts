@@ -21,6 +21,9 @@ export default defineNuxtModule<ModuleOptions>({
 			nuxt: '^3.10.0'
 		}
 	},
+	defaults: {
+		configPath: './database.config.ts'
+	},
 	hooks: {
 		close: async () => {
 			await disconnect()

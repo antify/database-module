@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@antify/database':
-    specifier: 3.4.1
-    version: 3.4.1
+    specifier: 4.0.0
+    version: 4.0.0
   '@nuxt/kit':
     specifier: ^3.13.2
     version: 3.20.2
@@ -17,8 +17,8 @@ dependencies:
 
 devDependencies:
   '@antify/database-cli':
-    specifier: ^1.4.0
-    version: 1.4.0
+    specifier: ^2.0.0
+    version: 2.0.0
   '@faker-js/faker':
     specifier: ^8.4.1
     version: 8.4.1
@@ -57,12 +57,12 @@ packages:
       tinyexec: 1.0.2
     dev: true
 
-  /@antify/database-cli@1.4.0:
-    resolution: {integrity: sha512-PdJ7glWn7c7rlsn7QXF21+ebMGb0kmdllGZnxdB2TFYfDIeEUUjAUu+KkzCf9KvLqnBt/Ib39naQ6wOVURDiAQ==}
+  /@antify/database-cli@2.0.0:
+    resolution: {integrity: sha512-YcJCL1ETXpVltyes583Pvjarj8LdouZdDutDHIzoiEQDv8wvNJpBnSRAwaUV9bRkZmNTDP5xiXgIjmcOJYop6w==}
     engines: {node: ^22.14.0, pnpm: '>=8'}
     hasBin: true
     dependencies:
-      '@antify/database': 3.4.1
+      '@antify/database': 4.0.0
       dotenv: 16.6.1
       scule: 1.3.0
     transitivePeerDependencies:
@@ -77,8 +77,8 @@ packages:
       - supports-color
     dev: true
 
-  /@antify/database@3.4.1:
-    resolution: {integrity: sha512-gMe3YNW+y0TyActiC+1+N+Hx1eDMCtB+hHAhzXzrEbeGQdvJ5qq1vevVGdGEa9urUkdNBqIIfaBkbEfkXfXkDg==}
+  /@antify/database@4.0.0:
+    resolution: {integrity: sha512-PMlcFWO9jDsVtnutQ7ddQbHRDvDT7VmqLfJYVk28NA+idfHVLqBLqxRPGmK5NapOOJ3+EJLhLEZ0X9WXjyBeNw==}
     engines: {node: ^22.14.0, pnpm: '>=8'}
     dependencies:
       '@vercel/functions': 3.3.5
@@ -2139,6 +2139,7 @@ packages:
     dependencies:
       is-glob: 4.0.3
       micromatch: 4.0.8
+      napi-wasm: 1.1.3
     dev: true
     bundledDependencies:
       - napi-wasm
@@ -6279,6 +6280,10 @@ packages:
     resolution: {integrity: sha512-PHI5f1O0EP5xJ9gQmFGMS6IZcrVvTjpXjz7Na41gTE7eE2hK11lg04CECCYEEjdc17EV4DO+fkGEtt7TpTaTiQ==}
     engines: {node: ^12.20.0 || ^14.18.0 || >=16.0.0}
     hasBin: true
+    dev: true
+
+  /napi-wasm@1.1.3:
+    resolution: {integrity: sha512-h/4nMGsHjZDCYmQVNODIrYACVJ+I9KItbG+0si6W/jSjdA9JbWDoU4LLeMXVcEQGHjttI2tuXqDrbGF7qkUHHg==}
     dev: true
 
   /natural-compare@1.4.0:
