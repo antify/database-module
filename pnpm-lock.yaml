@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@antify/database':
-    specifier: 4.0.0
-    version: 4.0.0
+    specifier: 4.0.2
+    version: 4.0.2
   '@nuxt/kit':
     specifier: ^3.13.2
     version: 3.20.2
@@ -62,7 +62,7 @@ packages:
     engines: {node: ^22.14.0, pnpm: '>=8'}
     hasBin: true
     dependencies:
-      '@antify/database': 4.0.0
+      '@antify/database': 4.0.2
       dotenv: 16.6.1
       scule: 1.3.0
     transitivePeerDependencies:
@@ -77,8 +77,8 @@ packages:
       - supports-color
     dev: true
 
-  /@antify/database@4.0.0:
-    resolution: {integrity: sha512-PMlcFWO9jDsVtnutQ7ddQbHRDvDT7VmqLfJYVk28NA+idfHVLqBLqxRPGmK5NapOOJ3+EJLhLEZ0X9WXjyBeNw==}
+  /@antify/database@4.0.2:
+    resolution: {integrity: sha512-GY2W9V2Ka+MgfnbyTYZ08g2MMUCZeqPFB8M8TYdc9LywKKpiUXTKoAHA+iO3ZdZpdcrvKwdQogyo/GGmstCb3w==}
     engines: {node: ^22.14.0, pnpm: '>=8'}
     dependencies:
       '@vercel/functions': 3.3.5

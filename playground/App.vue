@@ -36,6 +36,15 @@ const {
 	}
 });
 
+const {
+	execute: executeMigration,
+	data: migrationData,
+	pending: migrationPending,
+} = useFetch('/api/migrate', {
+	method: 'POST',
+	immediate: false,
+});
+
 function generateRandomCar() {
 	return {
 		model: faker.vehicle.model(),
@@ -70,5 +79,15 @@ function generateRandomCar() {
 
       <pre v-if="!multiTenancyPending">{{ multiTenancyData }}</pre>
     </div>
+  </div>
+
+  <br>
+
+  <div>
+    <button @click="() => executeMigration()">Run migration (creates search index for single-tenancy)</button>
+
+    <h3>Response</h3>
+
+    <pre v-if="!migrationPending">{{ migrationData }}</pre>
   </div>
 </template>

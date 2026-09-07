@@ -1,7 +1,7 @@
 import {defineSchema} from '@antify/database';
 import {Schema} from 'mongoose';
 
-export default defineSchema(() => {
+export const defineCarSchema = defineSchema(() => {
 	return {
 		name: 'cars',
 		schema: new Schema({
