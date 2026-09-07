@@ -5,7 +5,7 @@ dotenv.config();
 
 export default defineDatabaseConfig({
   core: {
-    databaseUrl: process.env.NUXT_DB_CORE_URL as string || 'mongodb://core:core@localhost:27017/core',
+    databaseUrl: process.env.NUXT_DB_CORE_URL as string || 'mongodb://localhost:27017/core?directConnection=true',
     isSingleConnection: true,
     migrationDir: './migrations/core',
     fixturesDir: [
@@ -14,7 +14,7 @@ export default defineDatabaseConfig({
     ],
   },
   tenant: {
-    databaseUrl: process.env.NUXT_DB_TENANT_URL as string || 'mongodb://root:root@127.0.0.1:27017',
+    databaseUrl: process.env.NUXT_DB_TENANT_URL as string || 'mongodb://localhost:27017/?directConnection=true',
     isSingleConnection: false,
     migrationDir: './migrations/tenant',
     fixturesDir: [
