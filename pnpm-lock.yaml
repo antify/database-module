@@ -19,8 +19,8 @@ importers:
         version: 6.1.7
     devDependencies:
       '@antify/database-cli':
-        specifier: ^2.0.0
-        version: 2.0.1(ws@8.21.3)
+        specifier: 2.0.3
+        version: 2.0.3(ws@8.21.3)
       '@faker-js/faker':
         specifier: ^8.4.1
         version: 8.4.1
@@ -51,9 +51,9 @@ packages:
   '@antfu/install-pkg@2.0.1':
     resolution: {integrity: sha512-iCKVQcIC0e3oDxEfs3SHQGW+ovhBMZmS1TE+bTk50rVyMCBmCfClv7Qi3HQKlumYwvjb/iIMeWCW2i67q6kFfQ==}
 
-  '@antify/database-cli@2.0.1':
-    resolution: {integrity: sha512-P9aABnUy9hN2kKmEUmOm7w19uFmdXn44FCkXjeLFZV2Msz1aA2LdmYoOLHBgMDnK4CClbaI22E94QYr/6VeCeQ==}
-    engines: {node: ^22.14.0, pnpm: '>=8'}
+  '@antify/database-cli@2.0.3':
+    resolution: {integrity: sha512-Gs4E5p7GD2NA20KGUokGf9jUbip6AV3gBfU0jnl0CkpP6NNV0JcKIWWUUAxY0NsDMH9vLWxX7hQkgt7G+5+dxA==}
+    engines: {node: ^22.14.0, pnpm: '>=10.10.0'}
     hasBin: true
 
   '@antify/database@4.0.2':
@@ -5024,7 +5024,7 @@ snapshots:
       package-manager-detector: 1.8.0
       tinyexec: 1.3.1
 
-  '@antify/database-cli@2.0.1(ws@8.21.3)':
+  '@antify/database-cli@2.0.3(ws@8.21.3)':
     dependencies:
       '@antify/database': 4.0.2(ws@8.21.3)
       dotenv: 16.6.1
