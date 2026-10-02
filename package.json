@@ -21,7 +21,8 @@
     "dev:build": "nuxi build playground",
     "dev:prepare": "nuxt-module-build build --stub && nuxt-module-build prepare && nuxi prepare playground",
     "release": "standard-version && git push --follow-tags && pnpm publish",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "dependencies": {
     "@antify/database": "4.0.2",
@@ -30,6 +31,7 @@
   },
   "devDependencies": {
     "@antify/database-cli": "2.0.3",
+    "dotenv": "16.6.1",
     "@faker-js/faker": "^8.4.1",
     "@nuxt/eslint-config": "latest",
     "@nuxt/module-builder": "latest",
