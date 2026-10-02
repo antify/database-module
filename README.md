@@ -10,4 +10,4 @@ This module provides a simple interface to interact with a multi-tenancy MongoDB
 - Use `pnpm run dev` to start [playground](playground) in development mode.
 - Run `pnpm prepack` to build and `pnpm lint` to lint.
 
-Never point the playground at a shared or production database. See [AGENTS.md](AGENTS.md) for commands, repository layout, and release notes (merging to `main` publishes to npm).
+Never point the playground at a shared or production database. See [AGENTS.md](https://github.com/antify/database-module/blob/main/AGENTS.md) for commands, repository layout, and release notes (merging to `main` publishes to npm).
